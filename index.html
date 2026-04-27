@@ -1,1 +1,293 @@
-project mas kahim
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBlocks Gamer - Premium Digital Solutions</title>
+    <meta name="google-site-verification" content="dsR1cwpACIMYroTfK5qNd0_tchdnH6yneWr6_bZ_GAY" />
+    <meta name="description" content="CodeBlocks Gamer menyediakan solusi digital premium, layanan pengembangan web eksklusif, dan penawaran terbaik untuk kebutuhan bisnis dan gaming Anda. Mewah, profesional, dan terpercaya.">
+    <link rel="canonical" href="https://www.codeblocks.gamer.gd/">
+    
+    <link rel="icon" type="image/png" href="https://www.codeblocks.gamer.gd/favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+            --radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(90deg, #111, #222);
+            padding: 8px 5%;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .top-bar span { color: var(--primary-gold); }
+
+        /* Navigation */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--primary-gold); }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1600') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .promo-badge {
+            background: var(--primary-gold);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        /* Categories */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 5%;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-content {
+            padding: 25px;
+        }
+
+        .category-content h3 {
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: #111;
+            margin: 80px 5%;
+            padding: 50px;
+            border-radius: var(--radius);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            border: 1px solid var(--primary-gold);
+        }
+
+        .contact-info h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+
+        .contact-list { list-style: none; }
+        .contact-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+        .contact-list span { color: var(--primary-gold); font-weight: bold; }
+
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--text-gray);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div>Email: <span>contact@codeblocks.gamer.gd</span></div>
+        <div>Promo Minggu Ini: <span>Diskon 30% Layanan Bisnis</span></div>
+    </div>
+
+    <nav>
+        <a href="https://www.codeblocks.gamer.gd/" class="logo">CODEBLOCKS</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="promo-badge">PENAWARAN TERBAIK HARI INI</div>
+        <h1>Elevate Your Digital Presence</h1>
+        <p>Solusi Mewah untuk Bisnis dan Gaming Ecosystem Anda</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Eksklusif Kategori</h2>
+        <div class="categories">
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=500" alt="Business Solution">
+                <div class="category-content">
+                    <h3>Enterprise Solution</h3>
+                    <p>Optimasi infrastruktur digital bisnis <a href="https://www.wildlifeprairiestatepark.org/edu-native.html">slot deposit 5000</a> Anda dengan standar keamanan kelas atas.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=500" alt="Gaming Store">
+                <div class="category-content">
+                    <h3>Gamer Haven</h3>
+                    <p>Koleksi item dan layanan khusus gamer dengan proses instan dan aman.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=500" alt="Web Development">
+                <div class="category-content">
+                    <h3>Premium Web Dev</h3>
+                    <p>Pembuatan website eksklusif dengan performa tinggi dan desain estetis.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <h2>Hubungi Kami</h2>
+                <p>Tim profesional kami siap melayani kebutuhan eksklusif Anda 24/7.</p>
+                <br>
+                <ul class="contact-list">
+                    <li><span>WhatsApp:</span> +62 8xx xxxx xxxx</li>
+                    <li><span>Telegram:</span> @CodeBlocksAdmin</li>
+                    <li><span>Lokasi:</span> Jakarta, Indonesia</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Layanan Pelanggan</h2>
+                <p>Gunakan layanan prioritas kami untuk mendapatkan penanganan lebih cepat dalam hitungan menit.</p>
+                <br>
+                <a href="#" style="display:inline-block; padding: 12px 30px; background: var(--primary-gold); color: #000; text-decoration: none; border-radius: var(--radius); font-weight: bold;">Kirim Pesan Sekarang</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CodeBlocks Gamer. All Rights Reserved.</p>
+        <p style="font-size: 0.7rem; margin-top: 10px;">Domain: https://www.codeblocks.gamer.gd/</p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "CodeBlocks Gamer",
+      "url": "https://www.codeblocks.gamer.gd/",
+      "logo": "https://www.codeblocks.gamer.gd/favicon.png",
+      "description": "Layanan solusi digital mewah dan premium untuk bisnis dan gaming.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jakarta",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
+</body>
+</html>
